@@ -3,7 +3,7 @@ export function LatestHead(){
         <div>
             <p className="text-2xl font-bold">All Blog Post</p>
         </div>
-        <div className="flex justify-between items-center w-full">
+        <div className="hidden lg:flex lg:justify-between lg:items-center lg:w-full">
             <div className="flex items-center gap-5">
                 <p className="text-amber-200 text-xs font-bold">All</p>
                 <p className="text-gray-600 text-xs font-bold">Design</p>

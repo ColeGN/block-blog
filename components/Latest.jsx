@@ -1,27 +1,28 @@
 import { LatestHead } from "./LatestHead"
 import { LatestCard } from "./LatestCard"
+import { useEffect, useState } from "react"
 
-const sampleArticle = {
-    title: "The Impact of Technology on the Workplace: How Technology is Changing",
-    date: "August 20, 2022",
-    category: "Design",
-    image: "https://images.unsplash.com/photo-1483652336121-476f6270c7d3?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-}
 export function Latest(){
-    return <div className="hidden lg:flex flex-col mx-auto w-8/12 gap-8">
-        <div>
+    const [articles, setArticles] = useState([])
+
+    useEffect(()=>{
+        fetch('https://dev.to/api/articles?username=nathan_tarbert')
+            .then((response)=>response.json())
+            .then((data)=>{
+                setArticles(data)
+            })
+    },[])
+    return <div className="flex flex-col items-start gap-7 w-10/12 lg:flex lg:flex-col lg:mx-auto lg:w-8/12 lg:gap-8">
+        <div className="ml-8">
             <LatestHead/>
         </div>
-        <div className="grid grid-cols-3 gap-5">
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
-            <LatestCard article={sampleArticle}/>
+        <div className="flex flex-col gap-7 lg:grid lg:grid-cols-3 lg:gap-5">
+            {articles.map((article)=>(
+                <LatestCard key={article.id} article={article}/>
+            ))}
+        </div>
+        <div className="lg:flex lg:py-3 lg:px-5 lg:justify-center lg:items-center lg:border lg:border-gray-500 lg:rounded-md mx-auto">
+           <a href="" className="hidden lg:flex lg:font-medium lg:text-base lg:text-gray-500 lg:align-center lg:text-center">Load More</a>
         </div>
     </div>
 }
