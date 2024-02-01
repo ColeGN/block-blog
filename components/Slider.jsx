@@ -1,4 +1,4 @@
-import { Chip } from "./little things/chip"
+import { Chip } from "./little things/Chip"
 
 export function Slider(){
     return <div className="lg:flex lg:flex-col lg:justify-center lg:m-auto  lg:w-8/12">

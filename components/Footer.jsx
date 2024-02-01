@@ -17,10 +17,36 @@ return <div className="flex flex-col py-7 items-start  lg:mx-auto lg:pt-16 lg:fl
                 <p className="text-base font-normal text-gray-600 font-sans">Contact</p>
             </div>
             <div className="flex justify-center items-center gap-7">
-                <img src="/images/Facebook.svg"/>
-                <img src="/images/Instagram.svg"/>
+                <a href="https://www.facebook.com/me/">
+                    <img src="/images/Facebook.svg"/>
+                </a>
+                <a href="https://www.instagram.com/cole.gn/">
+                    <img src="/images/Instagram.svg"/>
+                </a>
+                
                 <img src="/images/LinkedIn.svg"/>
                 <img src="/images/Twitter.svg"/>
+            </div>
+        </div>
+        <div className="flex justify-center items-center w-10/12 mt-6 lg:flex lg:justify-between lg:w-8/12 lg:mx-auto lg:items-center">
+            <div className="flex gap-3">
+                <div>
+                    <img src="/images/Logo.svg"/>
+                </div>
+                <div>
+                    <div className="flex">
+                        <p className="text-lg font-extralight ">Meta</p>
+                        <p className="text-lg font-bold">Blog</p>
+                    </div>
+                    <div>
+                        <p className="text-base font-extralight  font-sans">© All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+            <div className="flex gap-8">
+                <p className="text-base font-normal text-gray-600 font-sans">Terms of Use</p>
+                <p className="text-base font-normal text-gray-600 font-sans">Privacy Policy</p>
+                <p className="text-base font-normal text-gray-600 font-sans">Cookie Policy</p>
             </div>
         </div>
     </div>
