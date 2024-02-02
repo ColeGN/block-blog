@@ -43,7 +43,7 @@ return <div className="flex flex-col py-7 items-start  lg:mx-auto lg:pt-16 lg:fl
                     </div>
                 </div>
             </div>
-            <div className="flex gap-8">
+            <div className="hidden lg:flex lg:gap-8">
                 <p className="text-base font-normal text-gray-600 font-sans">Terms of Use</p>
                 <p className="text-base font-normal text-gray-600 font-sans">Privacy Policy</p>
                 <p className="text-base font-normal text-gray-600 font-sans">Cookie Policy</p>
