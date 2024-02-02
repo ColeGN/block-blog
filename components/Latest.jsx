@@ -83,7 +83,7 @@ export function Latest(){
                 <LatestCard key={article.id} article={article}/>
             ))}
         </div>
-        <div className="lg:flex lg:py-3 lg:px-5 lg:justify-center lg:items-center  mx-auto">
+        <div className="hidden lg:flex lg:py-3 lg:px-5 lg:justify-center lg:items-center  mx-auto">
            <button onClick={loadMore} className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" ><p className="hidden lg:flex lg:font-medium lg:text-base lg:text-red-400 lg:align-center lg:text-center">Load More</p></button>
         </div>
     </div>

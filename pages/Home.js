@@ -35,7 +35,7 @@ export default function Home(){
         </span>
         <div class="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
             <time class="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">1 day ago</time>
-            <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">Gantogtokh has created <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">this useful site</a> for developers  <span class="font-semibold text-gray-900 dark:text-white">Finished</span></div>
+            <div class="text-sm font-normal text-gray-500 lex dark:text-gray-300">Gantogtokh has created <a href="#" class="font-semibold text-blue-600 dark:text-blue-500 hover:underline">this MetaBlog site</a> for developers  <span class="font-semibold text-gray-900 dark:text-white">Finished</span></div>
         </div>
     </li>
 </ol>
