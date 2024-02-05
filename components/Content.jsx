@@ -17,7 +17,7 @@ export function Content(){
              <p className="text-2xl font-bold">Trending</p>
          </div>
          <div className="flex items-start gap-5 flex-1 w-full  whitespace-nowrap" >
-             <div className=" relative flex gap-2">
+             <div className="grid grid-cols-4">
              {articles.map((article)=>(
                  <Trending key={article.id} article={article}/>
              ))}
