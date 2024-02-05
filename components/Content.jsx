@@ -1,9 +1,8 @@
- import { Trending } from "./trending"
+import { Trending } from "./Trending"
  import { useState, useEffect } from "react"
 
 export function Content(){
       const [articles, setArticles] = useState([])
-      const [currentPage, setCurrentPage] = useState(1)
     
           useEffect(()=>{
               fetch('https://dev.to/api/articles?username=nevodavid&per_page=4&page=1')
