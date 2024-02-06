@@ -15,11 +15,11 @@ export function LatestHead({article}){
         <div className="hidden lg:flex lg:justify-between lg:items-center">
             <div className="flex items-center gap-5">
                 <p className="text-amber-200 text-xs font-bold">All</p>
-                <p className="text-gray-600 text-xs font-bold">Travel</p>
-                <p className="text-gray-600 text-xs font-bold">Travel</p>
-                <p className="text-gray-600 text-xs font-bold">Fashion</p>
-                <p className="text-gray-600 text-xs font-bold">Technology</p>
-                <p className="text-gray-600 text-xs font-bold">Branding</p>
+                <p className="text-gray-600 text-xs font-bold">Webdev</p>
+                <p className="text-gray-600 text-xs font-bold">Opensource</p>
+                <p className="text-gray-600 text-xs font-bold">Beginners</p>
+                <p className="text-gray-600 text-xs font-bold">Bubble</p>
+                <p className="text-gray-600 text-xs font-bold">Sbom</p>
             </div>
             <div className="">
             {/* <label for="underline_select" class="sr-only">Underline select</label>

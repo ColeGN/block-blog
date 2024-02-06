@@ -7,7 +7,10 @@ export function Header(){
     return <div className="relative">
         <div className="hidden lg:flex justify-between gap-32 py-16 mx-auto w-8/12">
             <div>
-                <img src="/images/MetaBlog.svg" alt="kke"/>
+                <Link href="/index">
+                    <img src="/images/MetaBlog.svg" alt="kke"/>
+                </Link>
+                
             </div>
             <div className="flex gap-10">
                 <div className="flex justify-center items-center gap-10  w-3/4">
