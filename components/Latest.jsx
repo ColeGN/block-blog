@@ -61,7 +61,7 @@ export function Latest(){
         <div className="w-full flex justify-between">
            <div className="flex justify-between">
                 <div>
-                    <LatestHead />
+                    <LatestHead setArticles={setArticles}/>
                 </div>
                 {/* <div>
                 <label for="underline_select" class="sr-only">Underline select</label>
