@@ -35,16 +35,16 @@ export function Latest(){
     //        }
     //    })
 
-    
-     function SwitchPath(){
-        //  const [filterArticle, setfilterArticle] = useState("")
+    // const [filterArticle, setfilterArticle] = useState("")
+    //  function Changer(){
+          
 
-        //  const filteredArticles = articles.filter((article)=> {
-        //      if(article.tag_list.includes(filterArticle)) {
-        //          return article
-        //      }
-        //  })
-     }
+    //       const filteredArticles = articles.filter((article)=> {
+    //           if(article.tag_list.includes(filterArticle)) {
+    //               return article
+    //           }
+    //       })
+    //  }
     function loadMore(){
         fetch(`https://dev.to/api/articles?username=nathan_tarbert&per_page=9&page=${currentPage + 1}`)
             .then((response)=>response.json())
@@ -56,24 +56,24 @@ export function Latest(){
 
     
 
-    if(articles === undefined ) return <Loader/>
     return <div className="flex flex-col items-start gap-7 w-10/12 lg:flex lg:flex-col lg:mx-auto lg:w-8/12 lg:gap-8">
         <div className="w-full flex justify-between">
            <div className="flex justify-between">
+                <div className="flex flex-col items-start gap-8 ">
                 <div>
-                    <LatestHead setArticles={setArticles}/>
+                <p className="text-2xl font-bold">All Blog Post</p>
                 </div>
-                {/* <div>
-                <label for="underline_select" class="sr-only">Underline select</label>
-            <select defaultValue={Path} onChange={event=>setPath(event.target.value)} id="underline_select" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-            <option selected>Choose a path</option>
-            <option value="webdev">webdev</option>
-            <option value="opensource">opensource</option>
-            <option value="beginners">beginners</option>
-            <option value="bubble">bubble</option>
-            <option value="sbom">sbom</option>
-            </select>
-                </div> */}
+                <div className="hidden lg:flex lg:justify-between lg:items-center">
+                <div className="flex items-center gap-5">
+                <p onClick={()=>Changer("all")} className="text-amber-200 text-xs font-bold">All</p>
+                <p onClick={()=>Changer("webdev")} className="text-gray-600 text-xs font-bold">Webdev</p>
+                <p onClick={()=>Changer("opensource")} className="text-gray-600 text-xs font-bold">Opensource</p>
+                <p onClick={()=>Changer("beginners")} className="text-gray-600 text-xs font-bold">Beginners</p>
+                <p onClick={()=>Changer("bubble")} className="text-gray-600 text-xs font-bold">Bubble</p>
+                <p onClick={()=>Changer("sbom")} className="text-gray-600 text-xs font-bold">Sbom</p>
+            </div>
+        </div>
+        </div>
                 
            </div>
             
@@ -88,3 +88,17 @@ export function Latest(){
         </div>
     </div>
 }
+{/* <div>
+                    <LatestHead setArticles={setArticles}/>
+                </div> */}
+                {/* <div>
+                <label for="underline_select" class="sr-only">Underline select</label>
+            <select defaultValue={Path} onChange={event=>setPath(event.target.value)} id="underline_select" class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-gray-400 dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+            <option selected>Choose a path</option>
+            <option value="webdev">webdev</option>
+            <option value="opensource">opensource</option>
+            <option value="beginners">beginners</option>
+            <option value="bubble">bubble</option>
+            <option value="sbom">sbom</option>
+            </select>
+                </div> */}

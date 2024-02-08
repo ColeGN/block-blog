@@ -4,6 +4,8 @@ import { Content } from "@/components/Content"
 import { Latest } from "@/components/Latest"
 import { Footer } from "@/components/Footer"
 import { LittleConatiner } from "@/components/LittleContainer"
+import {Countries} from "@/components/Countries"
+
 
 export default function index(){
   return <div className="flex lg:gap-24 flex-col">
@@ -22,5 +24,6 @@ export default function index(){
       <div>
          <Footer/>
       </div>
+      
   </div>
 }

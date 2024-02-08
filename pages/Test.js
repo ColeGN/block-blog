@@ -1,25 +1,42 @@
-import { useState , useEffect } from "react"
+import { useSpring, animated } from '@react-spring/web'
 
-export default function Test(){
-    const [timer , setTimer] = useState(10);
-    const [isPaused, setIsPaused]= useState(false)
+export default function  Test() {
+  const [props, api] = useSpring(
+    () => ({
+      from: { opacity: 0 },
+      to: { opacity: 1 },
+    }),
+    []
+  )
 
-    useEffect(()=>{
-        if (isPaused) return
+  return <animated.div style={props}>Hello World</animated.div>
+}
 
-        if (timer <= 0) return
-        const interval = setInterval(()=>{
-            setTimer(timer=>timer - 1);
-        }, 1000);
+
+
+
+// import { useState , useEffect } from "react"
+
+// export default function Test(){
+//     const [timer , setTimer] = useState(10);
+//     const [isPaused, setIsPaused]= useState(false)
+
+//     useEffect(()=>{
+//         if (isPaused) return
+
+//         if (timer <= 0) return
+//         const interval = setInterval(()=>{
+//             setTimer(timer=>timer - 1);
+//         }, 1000);
     
-        return () => clearInterval(interval)
-    }, [timer, isPaused]);
-    return <div>
-        <h1>timer{timer}</h1>
-        <button className="border border-black mr-1" onClick={()=>setIsPaused(false)}>start</button>
-        <button className="border border-black mr-1" onClick={()=>setIsPaused(true)}>pause</button>
-        <button className="border border-black mr-1" onClick={()=>setTimer(timer)}>reset</button>
-    </div>
+//         return () => clearInterval(interval)
+//     }, [timer, isPaused]);
+//     return <div>
+//         <h1>timer{timer}</h1>
+//         <button className="border border-black mr-1" onClick={()=>setIsPaused(false)}>start</button>
+//         <button className="border border-black mr-1" onClick={()=>setIsPaused(true)}>pause</button>
+//         <button className="border border-black mr-1" onClick={()=>setTimer(timer)}>reset</button>
+//     </div>
     
 
     
@@ -35,4 +52,3 @@ export default function Test(){
     // };
 
     // return<input className="border border-black" value={val} onChange={onChange}/>
-}

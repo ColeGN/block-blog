@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { ContactContainer } from "@/components/ContactContainer"
-
 export default function Contact(){
     return <div>
         <div>
@@ -17,6 +16,9 @@ export default function Contact(){
         <h3 class="absolute text-2xl text-green-300 bottom-5 right-5">Bottom Right</h3>
     </div> */}
             <ContactContainer/>
+            
+
+  
         </div>
         <div>
             <Footer/>
