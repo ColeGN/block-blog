@@ -70,10 +70,10 @@ export function Slider(){
             </div>
         </div> */}
         <div className="hidden lg:flex gap-2 mt-3 justify-end">
-                <div className="" onClick={PreviosNews}>
+                <div className="cursor-pointer" onClick={PreviosNews}>
                     <img src="/images/back.svg"/>
                 </div>
-                <div className="" onClick={NextNews}>
+                <div className="cursor-pointe" onClick={NextNews}>
                     <img src="/images/forward.svg"/>
                 </div>
         </div>
