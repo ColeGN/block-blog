@@ -73,7 +73,7 @@ export function Slider(){
                 <div className="cursor-pointer" onClick={PreviosNews}>
                     <img src="/images/back.svg"/>
                 </div>
-                <div className="cursor-pointe" onClick={NextNews}>
+                <div className="cursor-pointer" onClick={NextNews}>
                     <img src="/images/forward.svg"/>
                 </div>
         </div>
