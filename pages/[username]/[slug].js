@@ -28,7 +28,7 @@ export default function  Cole({details}){
             <meta property="og:title" content={details.title} />
             <meta property="og:image" content={details.cover_image} />
             <meta property="og:description" content={details.description} />
-      </Head>
+        </Head>
         <div>
             <Header/>
         </div>
