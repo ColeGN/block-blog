@@ -5,8 +5,8 @@ import { useSpring, animated } from '@react-spring/web'
 export function Slider(){
     const [props, api] = useSpring(
         () => ({
-          from: { opacity: 0 },
-          to: { opacity: 10 },
+        from: { opacity: 0 },
+        to: { opacity: 10 },
         }),
         []
       )
